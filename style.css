@@ -1,0 +1,220 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #7c1515;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Button Styles */
+button {
+    padding: 12px 24px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+button.active {
+    background-color: #FF5722;
+    color: #fff;
+    border-color: #FF5722;
+}
+
+/* Image Gallery */
+#imageGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#imageGallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imageGallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tab-links button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f9f9f9;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.tab-links button:hover {
+    background-color: #e0e0e0;
+    border-color: #4CAF50;
+}
+
+.tab-links button.active {
+    border-color: #FF5722;
+    font-weight: bold;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #fff;
+}
+
+form input:invalid {
+    border-color: #FF5252;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#feedback.success {
+    background-color: #DFF2BF;
+    color: #4F8A10;
+    border: 1px solid #D6E9C6;
+}
+
+#feedback.error {
+    background-color: #FFBABA;
+    color: #D8000C;
+    border: 1px solid #F5C6CB;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #imageGallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    form {
+        width: 100%;
+    }
+
+    main {
+        width: 95%;
+    }
+}
